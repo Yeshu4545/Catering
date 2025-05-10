@@ -16,7 +16,7 @@ const Menu = () => {
   useEffect(() => {
     const fetchMenuItems = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/menu", {
+        const response = await axios.get("https://catering-47l4.onrender.com/api/menu", {
           headers: {
             "Content-Type": "application/json",
           },

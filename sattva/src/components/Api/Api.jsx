@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/checkout';
+const API_URL = 'https://catering-47l4.onrender.com/api/checkout';
 
 export const placeOrder = async (orderData) => {
     try {

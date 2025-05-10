@@ -45,7 +45,7 @@ const Checkout = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/orders",
+        "https://catering-47l4.onrender.com/api/orders",
         {
           customerName: formData.name,
           phoneNumber: formData.phone,

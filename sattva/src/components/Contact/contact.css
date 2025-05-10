@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+
+.contact-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f8f8f8;
+    background: rgb(240, 238, 238);
+}
+.contact-section h2{
+    padding: 20px 0;
+} 
+.contact-section h2 span{
+    font-family: "Covered By Your Grace", cursive;    
+    color: goldenrod;
+}
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.map-container {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

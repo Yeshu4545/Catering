@@ -1,0 +1,68 @@
+.why-choose-us {
+    background: url('../../../assets/background.jpg') no-repeat center center/cover;
+    padding: 80px 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.why-choose-us h2 {
+    font-size: 3rem;
+    margin-bottom: 70px;
+    position: relative;
+    z-index: 2;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.feature {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.feature img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover img {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.feature-text {
+    text-align: left;
+}
+
+.feature h3 {
+    font-size: 1.8rem;
+    color: #27ae60;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+}

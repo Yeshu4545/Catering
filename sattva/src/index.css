@@ -1,0 +1,334 @@
+/* main.css - Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  /* Color Palette */
+  --primary: #2a2a2a;         /* Dark gray for text */
+  --secondary: #d4a762;        /* Gold accent */
+  --light: #f8f8f8;            /* Light background */
+  --dark: #1a1a1a;            /* Dark background */
+  --text: #333333;            /* Primary text */
+  --text-light: #666666;       /* Secondary text */
+  --white: #ffffff;
+  --error: #e74c3c;
+  
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Lato', sans-serif;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  line-height: 1.6;
+  background-color: var(--light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--space-sm);
+  color: var(--primary);
+}
+
+h1 { font-size: var(--text-4xl); }
+h2 { font-size: var(--text-3xl); }
+h3 { font-size: var(--text-2xl); }
+h4 { font-size: var(--text-xl); }
+
+p {
+  margin-bottom: var(--space-sm);
+  color: var(--text-light);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-md);
+  background-color: var(--secondary);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: darken(var(--secondary), 10%);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+}
+
+/* Layout Components */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.section {
+  padding: var(--space-xl) 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--secondary);
+  margin: var(--space-sm) auto;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: var(--space-sm) 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.logo {
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.brand-name {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.nav-link {
+  position: relative;
+  padding: var(--space-xs) 0;
+  font-weight: 500;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.cart-button {
+  position: relative;
+  background: var(--light);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.cart-button:hover {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--error);
+  color: var(--white);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  height: 80vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('../assets/hero-bg.jpg') center/cover no-repeat;
+  color: var(--white);
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: var(--text-4xl);
+  margin-bottom: var(--space-md);
+  color: var(--white);
+}
+
+.hero p {
+  font-size: var(--text-lg);
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--space-lg);
+}
+
+/* Menu Section */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-md);
+}
+
+.menu-card {
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-10px);
+}
+
+.menu-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-content {
+  padding: var(--space-md);
+}
+
+.menu-title {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-xs);
+}
+
+.menu-price {
+  color: var(--secondary);
+  font-weight: 700;
+  font-size: var(--text-lg);
+}
+
+/* Cart Modal - Add this to your existing CartModal.css */
+.cart-modal-overlay {
+  /* ... existing styles ... */
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.cart-modal {
+  /* ... existing styles ... */
+  background: var(--white);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  :root {
+    --text-base: 0.9rem;
+    --text-lg: 1rem;
+    --text-xl: 1.125rem;
+    --text-2xl: 1.25rem;
+    --text-3xl: 1.5rem;
+    --text-4xl: 2rem;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .hero {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}

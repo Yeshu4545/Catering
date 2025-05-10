@@ -1,0 +1,147 @@
+/* AboutUs.css */
+.about-us {
+  padding: 5rem 0;
+  background-color: #f9f7f2;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2a2a2a;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #d4af37;
+  margin: 1rem auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-text h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.about-text h3 span {
+  color: #d4af37;
+}
+
+.lead-text {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.mission-statement {
+  background: white;
+  padding: 2rem;
+  border-left: 4px solid #d4af37;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.mission-statement h4 {
+  color: #d4af37;
+  margin-bottom: 1rem;
+}
+
+.signature {
+  height: 40px;
+  margin-top: 1rem;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: #d4af37;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.experience-badge span {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.service-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.highlight-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-10px);
+}
+
+.highlight-card h4 {
+  color: #d4af37;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .experience-badge {
+    width: 100px;
+    height: 100px;
+    right: 10px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
